@@ -1,2 +1,1 @@
-# Rational Class (Java)
 # SuperFunction
