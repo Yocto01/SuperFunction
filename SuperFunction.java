@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 public class SuperFunction{
     
-    public Rational[] solve(int[] an){
+    public Rational[] solve(BigInteger[] an){
         Rational equation[],solution[];
         int n = an.length;
 
@@ -12,7 +12,7 @@ public class SuperFunction{
         return solution;
     }
 
-    public Rational[] set(int[] an){
+    public Rational[] set(BigInteger[] an){
         Rational equation[];
         int n = an.length;
         equation = new Rational[n*(n+1)];
@@ -21,7 +21,7 @@ public class SuperFunction{
             for(int j=0; j<n; j++){
                 equation[i*(n+1)+j] = new Rational(x.pow(n-j-1),BigInteger.valueOf(1));
             }
-            equation[i*(n+1)+n] = new Rational(an[i],1);
+            equation[i*(n+1)+n] = new Rational(an[i],BigInteger.valueOf(1));
         }
         return equation;
     }
